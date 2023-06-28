@@ -9,6 +9,11 @@ img {
   text-align: center;
   background-color: white;
   padding: 0 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .main .section {
@@ -134,7 +139,6 @@ img {
   box-shadow: 0em 0em 0em 0em rgba(0, 0, 0, 1);
   border: none;
   transition: all 0.5s;
-
 }
 .telegram-style__red:hover {
   background: rgb(248, 232, 1);
