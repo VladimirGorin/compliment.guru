@@ -23,4 +23,7 @@
   .wrapper{
     background-color: white !important;
   }
+  .footer{
+    min-width: none !important;
+  }
 }
