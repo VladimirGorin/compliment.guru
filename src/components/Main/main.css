@@ -7,9 +7,11 @@ img {
   box-sizing: border-box;
   max-width: 600px;
   text-align: center;
+  background-color: white;
+  padding: 0 20px;
 }
 
-.section {
+.main .section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,17 +21,17 @@ img {
   margin-bottom: 20px;
 }
 
-.left-side {
+.main .left-side {
   max-width: 492px;
 }
 
-.sec3 b {
+.main .sec3 b {
   line-height: 1.6em;
   display: block;
   text-align: left;
 }
 
-.sec3 span {
+.main .sec3 span {
   font-size: 14px;
   display: block;
   text-align: left;
@@ -37,7 +39,7 @@ img {
   margin: 15px 0;
 }
 
-.sec1 h2 {
+.main .sec1 h2 {
   text-align: center;
   color: rgb(160, 61, 1);
   margin-bottom: 15px;
@@ -47,7 +49,7 @@ img {
   font-weight: bold;
 }
 
-.sec1 h3 {
+.main .sec1 h3 {
   text-align: center;
   color: rgb(0, 0, 0);
   font-size: 1.5em;
@@ -56,7 +58,7 @@ img {
   font-weight: bold;
 }
 
-.sec1 p {
+.main .sec1 p {
   text-align: center;
   color: rgb(2, 74, 109);
   font-size: 1em;
@@ -132,6 +134,7 @@ img {
   box-shadow: 0em 0em 0em 0em rgba(0, 0, 0, 1);
   border: none;
   transition: all 0.5s;
+
 }
 .telegram-style__red:hover {
   background: rgb(248, 232, 1);
@@ -139,7 +142,7 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-  .sec3 span {
+  .main .sec3 span {
     font-size: 16px;
   }
 }

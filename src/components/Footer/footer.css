@@ -5,6 +5,11 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-sizing: border-box;
+  min-width: 600px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
 }
 
 .footer a {
@@ -12,4 +17,10 @@
   color: #409eff;
   line-height: 1.6em;
   font-size: 12px;
+}
+
+@media screen and (max-width:600px) {
+  .wrapper{
+    background-color: white !important;
+  }
 }
