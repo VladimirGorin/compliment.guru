@@ -149,4 +149,7 @@ img {
   .main .sec3 span {
     font-size: 16px;
   }
+  .telegram-style__blue {
+    height: 100%;
+  }
 }

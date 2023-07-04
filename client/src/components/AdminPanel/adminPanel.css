@@ -1,0 +1,44 @@
+.admin-panel {
+  box-sizing: border-box;
+  max-width: 600px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.admin-panel .section {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.new-button__input {
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.button-caption{
+  display: block;
+  color: green;
+  font-size: 15px;
+}
+
+.admin-panel .sec1 h2{
+  margin-bottom: 15px;
+}
+.admin-panel .sec2 h2{
+  margin-bottom: 15px;
+}
+.admin-panel .sec3 h2{
+  margin-bottom: 15px;
+}
