@@ -1,15 +1,13 @@
 import React from "react";
-import "./guide.css";
+import guideImg from "../../assets/img/guideImg.png";
 import { Link } from "react-router-dom";
+import "./guide.css";
 
 export default function Guide() {
   return (
     <div className="guide">
       <div className="section sec1">
-        <img
-          src="https://eva.botsister.ru/e1c6fc35-7d6d-48fd-bd84-7e8b301491b2/dezdemona.png"
-          alt="img"
-        />
+        <img src={guideImg} alt="img" />
         <h2>
           Техника работы с<br />
           Валентностью

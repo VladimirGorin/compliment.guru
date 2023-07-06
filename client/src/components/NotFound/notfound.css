@@ -1,0 +1,17 @@
+.notfound-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 700px;
+}
+
+.notfound-main h1 {
+  background-color: white;
+  padding: 50px;
+}
+
+@media screen and (max-width: 400px) {
+  .notfound-main h1 {
+    padding: 20px;
+  }
+}

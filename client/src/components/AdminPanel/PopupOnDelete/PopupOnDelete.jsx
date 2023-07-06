@@ -10,7 +10,11 @@ const PopupOnDelete = ({ isOpen, buttonsData, setShowButtons }) => {
     display: isOpen ? "flex" : "none",
   };
 
-  const showButtons = buttonsData?.map(item => <button className="article-button__blue">{item?.title} id: {item?.id}</button>)
+  const showButtons = buttonsData?.map((item) => (
+    <button className="article-button__blue">
+      {item?.title} id: {item?.id}
+    </button>
+  ));
 
   return (
     <div className="popup" style={displayStyle}>

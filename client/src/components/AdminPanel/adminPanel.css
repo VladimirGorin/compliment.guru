@@ -23,22 +23,22 @@
 }
 
 .new-button__input {
-    width: 100%;
-    padding: 10px 5px;
+  width: 100%;
+  padding: 10px 5px;
 }
 
-.button-caption{
+.button-caption {
   display: block;
   color: green;
   font-size: 15px;
 }
 
-.admin-panel .sec1 h2{
+.admin-panel .sec1 h2 {
   margin-bottom: 15px;
 }
-.admin-panel .sec2 h2{
+.admin-panel .sec2 h2 {
   margin-bottom: 15px;
 }
-.admin-panel .sec3 h2{
+.admin-panel .sec3 h2 {
   margin-bottom: 15px;
 }

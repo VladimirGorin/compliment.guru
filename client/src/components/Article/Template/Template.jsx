@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
-import "./template.css";
+import templateImg from "../../../assets/img/template.png"
 import TriggerComponent from "./TriggerComponent/TriggerComponent";
+import "./template.css";
 
 export default function Template({ buttonsData }) {
   const { id } = useParams();
@@ -16,7 +17,7 @@ export default function Template({ buttonsData }) {
     <div className="template">
       <div className="section sec1">
         <img
-          src="https://eva.botsister.ru/5a1b2e44-c00d-4fbd-9619-2317b991cf6c/a.png"
+          src={templateImg}
           alt="img"
         />
         <h2>{product?.title}</h2>

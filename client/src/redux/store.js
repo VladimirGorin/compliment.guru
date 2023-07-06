@@ -2,7 +2,13 @@ const { transliterate } = require("transliteration");
 
 let store = {
     _state: {
-        buttonsData: []
+        buttonsData: [],
+        server: {
+            defaultIP: "45.141.78.148",
+            devIP: "127.0.0.1",
+            devStatus: false,
+            port: 3001
+        }
     },
     renderDomElements() { },
 
@@ -27,13 +33,13 @@ let store = {
     },
 
     sendRequest(method, data, path) {
-        fetch(`http://127.0.0.1:3001/${path}`, {
+        fetch(`http://${this._state.server.devStatus ? this._state.server.devIP : this._state.server.defaultIP}:${this._state.server.port}/${path}`, {
             method: method,
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(data),
-        }).then((response) => { return response }).then((data) => { console.log(data); }).catch((error) => { console.error("Error to fetch set-new-button", error); });
+        }).then((response) => { return response }).then((data) => { }).catch((error) => { console.error("Error to fetch set-new-button", error); });
     },
 
     setNewButton({ title }) {
@@ -92,7 +98,7 @@ let store = {
     },
 
     async checkAdmin(data) {
-        const status = await fetch(`http://127.0.0.1:3001/get-admin`, {
+        const status = await fetch(`http://${this._state.server.devStatus ? this._state.server.devIP : this._state.server.defaultIP}:${this._state.server.port}/get-admin`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -112,4 +118,4 @@ let store = {
 
 }
 
-module.exports = store
+export default store;

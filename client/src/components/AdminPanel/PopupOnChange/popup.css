@@ -35,7 +35,9 @@
   flex-direction: column;
 }
 
-.form-change h2, h3, p {
+.form-change h2,
+h3,
+p {
   text-align: left;
 }
 
@@ -46,7 +48,7 @@
   margin: 5px 0;
 }
 
-.change-button__name{
+.change-button__name {
   margin-bottom: 20px !important;
   height: 40px !important;
   font-size: 18px;

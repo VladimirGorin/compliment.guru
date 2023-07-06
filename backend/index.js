@@ -4,7 +4,6 @@ const express = require("express")
 const { readJsonFile,
     setJsonValue } = require("./assets/modules/jsonFucntions.js")
 
-//readJsonFile("./assets/data/buttonsData.json")
 
 let app = express()
 
@@ -16,8 +15,8 @@ app.get("/get-buttons-data", function (req, res) {
 })
 
 app.post("/get-admin", function (req, res) {
-    if(process.env.login === req.body?.login){
-        if(process.env.password === req.body?.password){
+    if (process.env.login === req.body?.login) {
+        if (process.env.password === req.body?.password) {
             res.sendStatus(200)
             return
         }
@@ -27,10 +26,10 @@ app.post("/get-admin", function (req, res) {
 })
 
 app.post("/set-new-button", function (req, res) {
-    console.log(req.body)
     res.send(setJsonValue("./assets/data/buttonsData.json", req.body))
 })
 
 app.listen(process.env.port, function () {
     console.log(`CORS-enabled web server\nserver live in port ${process.env.port}`)
 })
+

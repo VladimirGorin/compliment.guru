@@ -1,15 +1,13 @@
 import React from "react";
 import "./main.css";
+import comp from "../../assets/img/comp.png";
 import { Link } from "react-router-dom";
 
 export default function Main() {
   return (
     <div className="main">
       <div className="section sec1">
-        <img
-          src="https://eva.botsister.ru/385ce5a3-9186-41c5-8dd7-e430ab0e8ccd/comp.png"
-          alt="img"
-        />
+        <img src={comp} alt="img" />
         <h2>Искусство Комплимента</h2>
         <h3>или как научиться располагать к себе людей</h3>
         <p>бесплатный мини практикум</p>

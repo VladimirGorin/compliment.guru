@@ -1,5 +1,4 @@
 import React from "react";
-import "./securityButton.css";
 
 export default function SecurityButton() {
   return (

@@ -9,6 +9,7 @@ import Template from "./components/Article/Template/Template";
 import AdminPanel from "./components/AdminPanel/AdminPanel";
 import Loader from "./components/Loader/Loader";
 import { useEffect, useState } from "react";
+import NotFound from "./components/NotFound/NotFound";
 
 function App({
   state,
@@ -17,16 +18,19 @@ function App({
   setNewButton,
   setButtonsData,
   deleteButton,
-  checkAdmin
+  checkAdmin,
+  serverConfig,
 }) {
-
   let buttonsData = state?.buttonsData;
   const [isLoading, setIsLoading] = useState(true);
 
   generateLink();
-
   useEffect(() => {
-    fetch("http://127.0.0.1:3001/get-buttons-data")
+    fetch(
+      `http://${
+        serverConfig.devStatus ? serverConfig.devIP : serverConfig.defaultIP
+      }:${serverConfig.port}/get-buttons-data`
+    )
       .then((response) => response.json())
       .then((data) => {
         setButtonsData(data);
@@ -36,7 +40,7 @@ function App({
         console.error("Error to fetch get-buttons-data", error);
         setIsLoading(false);
       });
-  }, []);
+  }, [setButtonsData]);
 
   if (isLoading) {
     return <Loader />;
@@ -75,6 +79,7 @@ function App({
           path="/article/:id"
           element={<Template buttonsData={buttonsData} />}
         />
+        <Route key={"notfound"} path={"*"} element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
