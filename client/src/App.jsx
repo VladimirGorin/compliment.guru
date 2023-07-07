@@ -10,6 +10,7 @@ import AdminPanel from "./components/AdminPanel/AdminPanel";
 import Loader from "./components/Loader/Loader";
 import { useEffect, useState } from "react";
 import NotFound from "./components/NotFound/NotFound";
+import Man from "./components/Man/Man";
 
 function App({
   state,
@@ -78,6 +79,11 @@ function App({
           key={"template"}
           path="/article/:id"
           element={<Template buttonsData={buttonsData} />}
+        />
+        <Route
+          key={"man"}
+          path="man"
+          element={<Man />}
         />
         <Route key={"notfound"} path={"*"} element={<NotFound />} />
       </Routes>
